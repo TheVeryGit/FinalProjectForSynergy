@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FemaleActivity"
+    android:background="#8638FE"
+    >
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:textSize = "25sp"
+        android:textStyle = "bold"
+        android:textColor = "#FFFFFF"
+        android:background = "@drawable/shape"
+        android:gravity="center"
+        android:text="Расчёт ккалорий"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id ="@+id/clientInfo"
+        android:layout_width="350dp"
+        android:layout_height="400dp"
+        android:orientation="vertical"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/shape2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text"
+        >
+        <TextView
+            android:id="@+id/heightText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:textSize = "20sp"
+            android:text="Ваш рост:"
+            android:textColor = "#9C27B0"/>
+        <EditText
+            android:id="@+id/heightIn"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:ems="10"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/entry"
+            android:hint="Введите ваш рост в см:"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+        <TextView
+            android:id="@+id/weightText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:textSize = "20sp"
+            android:text="Ваш вес:"
+            android:textColor = "#9C27B0"/>
+        <EditText
+            android:id="@+id/weightIn"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:ems="10"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/entry"
+            android:hint="Введите ваш вес в кг:"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+        <TextView
+            android:id="@+id/ageText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:textSize = "20sp"
+            android:text="Ваш возраст:"
+            android:textColor = "#9C27B0"/>
+        <EditText
+            android:id="@+id/ageIn"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/entry"
+            android:hint="Введите ваш возраст:"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="350dp"
+        android:layout_height="100dp"
+        android:padding="5dp"
+        android:hint ="Здесь будет отображаться ваша суточная норма потребления в ккалориях"
+        android:layout_margin="20dp"
+        android:textColorHint="#CFCFCF"
+        android:textStyle="bold"
+        android:gravity = "center"
+        android:textSize = "20sp"
+        android:textColor = "#FEB55C"
+        android:background="@drawable/shape2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf = "@id/clientInfo"
+        />
+
+    <Button
+        android:id="@+id/resultButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="РАССЧИТАТЬ"
+        android:textStyle = "bold"
+        android:backgroundTint="#FF9800"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="@id/result"
+        app:layout_constraintTop_toBottomOf = "@id/result"/>
+    <Button
+        android:id = "@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text = "назад"
+        android:textColor = "#FFFFFF"
+        android:gravity="center"
+        android:textStyle = "bold"
+        android:backgroundTint="#FF9800"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="@id/result"
+        app:layout_constraintTop_toBottomOf = "@id/result"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
